@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/action"
+            android:text="Actions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/holo_orange_light"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/drama"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/drama"
+            android:text="Drama"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:background="@android:color/holo_orange_dark"
+            app:layout_constraintBottom_toBottomOf="@id/action"
+            app:layout_constraintLeft_toRightOf="@id/action"
+            app:layout_constraintRight_toLeftOf="@id/horner" />
+
+        <Button
+            android:id="@+id/horner"
+            android:text="Horner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/holo_green_dark"
+            app:layout_constraintBottom_toBottomOf="@id/action"
+            app:layout_constraintLeft_toRightOf="@id/drama"
+            app:layout_constraintRight_toLeftOf="@id/funny" />
+
+        <Button
+            android:id="@+id/funny"
+            android:text="Funny"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/holo_blue_bright"
+            app:layout_constraintBottom_toBottomOf="@id/action"
+            app:layout_constraintLeft_toRightOf="@id/horner"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_margin="10dp"
+            app:layout_goneMarginTop="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/action">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
